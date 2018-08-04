@@ -4,11 +4,11 @@ import os
 
 
 def Main():
-    cidade = input('Digite a cidade: ')
-    pais = input('Se seu pais for diferente do brasil, digite: ')
-    if pais is None:
-        pais ='Brazil'
-    source = requests.get('https://www.foreca.com/'+pais+'/'+cidade.replace(' ','_')+'?tenday').text
+    city = input('Type your city: ')
+    country = input('If your country is not Brazil type,else press enter: ')
+    if country is None:
+        country ='Brazil'
+    source = requests.get('https://www.foreca.com/'+country+'/'+city.replace(' ','_')+'?tenday').text
     soup = BeautifulSoup(source, "html5lib")
     type_temp =['Hi: ','Lo: ']
     os.system('cls')
