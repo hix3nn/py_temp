@@ -8,7 +8,7 @@ def Main():
     city =city.split(',')
     country= city[1]
     city = city[0].replace(' ','_') 
-    source = requests.get('https://www.foreca.com/'+country+'/'+city.replace(' ','_')+'?tenday&quick_units=metric').text
+    source = requests.get('https://www.foreca.com/'+country+'/'+city+'?tenday&quick_units=metric').text
     soup = BeautifulSoup(source, "html5lib")
     os.system('cls')
     name = soup.find('div',class_='content-left')
