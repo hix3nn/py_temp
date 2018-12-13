@@ -6,5 +6,5 @@
 * requests
 
 ## Screenshot
-![alt text](https://i.imgur.com/FOBEMCS.png)
+![alt text](https://i.imgur.com/1LEId5Q.png)
 

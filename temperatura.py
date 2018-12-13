@@ -10,7 +10,7 @@ def Main():
     city = city[0].replace(' ','_') 
     source = requests.get('https://www.foreca.com/'+country+'/'+city+'?tenday&quick_units=metric').text
     soup = BeautifulSoup(source, "html5lib")
-    os.system('cls')
+    os.system('clear')
     name = soup.find('div',class_='content-left')
     print('~ '+ name.h2.text+' ~')
     for each_forecast in soup.find_all('a',class_='cell'):
@@ -23,5 +23,4 @@ def Main():
             else:
                 print('- Winds: '+each_temp.text + ' Km/h')
             count += 1
-    os.system('pause')
 Main()
